@@ -1,0 +1,33 @@
+# Shell scripts (Linux/macOS)
+*.sh text eol=lf
+/mvnw text eol=lf
+
+# Windows batch files
+*.cmd text eol=crlf
+/mvnw.cmd text eol=crlf
+
+# Java source files
+*.java text eol=lf
+
+# Configuration and resource files
+*.xml text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.properties text eol=lf
+
+# Markdown and documentation
+*.md text eol=lf
+
+# Ignore generated binary diffs
+*.jar binary
+*.war binary
+*.class binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+
+# GitHub linguist hints
+*.min.js linguist-vendored
+*.svg linguist-generated
