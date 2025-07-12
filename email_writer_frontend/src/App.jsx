@@ -6,11 +6,14 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // ✅ Proper bootstrap CSS impor
 
 import Form from './Component/EmailForm.jsx';
 
+
 function App() {
 
   return (
     <>
+
       <Form />
+
     </>
   )
 }
