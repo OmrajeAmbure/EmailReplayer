@@ -1,5 +1,5 @@
 # Stage 1: Builder
-FROM eclipse-temurin:17-jdk AS builder
+FROM eclipse-temurin:21-jdk AS builder
 
 WORKDIR /app
 
@@ -13,7 +13,7 @@ COPY email-writer /app/email-writer
 RUN cd email-writer && mvn clean package -DskipTests
 
 # Stage 2: Runtime
-FROM eclipse-temurin:17-jdk
+FROM eclipse-temurin:21-jdk
 WORKDIR /app
 COPY --from=builder /app/email-writer/target/email-writer-*.jar app.jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
