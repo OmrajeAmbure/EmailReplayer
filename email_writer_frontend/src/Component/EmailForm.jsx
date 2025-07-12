@@ -20,7 +20,7 @@ function EmailForm() {
     };
 
     try {
-      const res = await axios.post("http://localhost:8080/api/email/generate", payload);
+      const res = await axios.post("https://emailreplayer-1.onrender.com/api/email/generate", payload);
       setGeneratedReply(typeof res.data === 'string' ? res.data : JSON.stringify(res.data, null, 2));
       if (res.status === 200) {
         console.log("Email reply generated successfully:", res.data);
